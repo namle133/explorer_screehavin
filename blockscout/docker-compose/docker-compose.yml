@@ -57,7 +57,8 @@ services:
       - ./logs/:/app/logs/
 
   smart-contract-verifier:
-    image: ghcr.io/blockscout/smart-contract-verifier:${SMART_CONTRACT_VERIFIER_DOCKER_TAG:-latest}
+    image: ghcr.io/blockscout/smart-contract-verifier:v0.6.0
+    #image: ghcr.io/blockscout/smart-contract-verifier:${SMART_CONTRACT_VERIFIER_DOCKER_TAG:-main}
     restart: always
     container_name: 'smart-contract-verifier'
     env_file:
